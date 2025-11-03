@@ -1,0 +1,30 @@
+{
+  "name": "postcss-kazaksha",
+  "version": "1.0.0",
+  "description": "PostCSS плагині - қазақша CSS жазып, стандартты CSS-ке аударыңыз",
+  "main": "index.js",
+  "keywords": [
+    "postcss",
+    "postcss-plugin",
+    "css",
+    "kazakh",
+    "kazaksha",
+    "қазақша",
+    "i18n"
+  ],
+  "author": "baur.sha",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/сіздің-username/postcss-kazaksha.git"
+  },
+  "bugs": {
+    "url": "https://github.com/сіздің-username/postcss-kazaksha/issues"
+  },
+  "peerDependencies": {
+    "postcss": "^8.0.0"
+  },
+  "devDependencies": {
+    "postcss": "^8.4.0"
+  }
+}
