@@ -1,4 +1,4 @@
-export const dictionary = {
+module.exports = {
     // === ТҮСТЕР ===
     'түс': 'color',
     'артқы-түс': 'background-color',
