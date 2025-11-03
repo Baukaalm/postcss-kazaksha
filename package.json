@@ -1,6 +1,6 @@
 {
   "name": "postcss-kazaksha",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "PostCSS плагині - қазақша CSS жазып, стандартты CSS-ке аударыңыз",
   "main": "index.js",
   "keywords": [

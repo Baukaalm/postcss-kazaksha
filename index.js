@@ -54,26 +54,29 @@ const translateValues = (value) => {
 const translateProperty = (prop) =>
   dictionary[prop.toLowerCase()] || prop;
 
-module.exports = postcss.plugin('postcss-kazaksha', () => {
-  return (root) => {
-    root.walkDecls((decl) => {
-      const translatedValue = [translateCSSVariables, translateValues]
-        .reduce((value, transform) => transform(value), decl.value);
-      
-      const translatedProp = decl.prop.startsWith('--') 
-        ? translateCustomProperty(decl.prop)
-        : translateProperty(decl.prop);
-      
-      decl.value = translatedValue;
-      decl.prop = translatedProp;
-    });
+const processRoot = (root) => {
+  root.walkDecls((decl) => {
+    const translatedValue = [translateCSSVariables, translateValues]
+      .reduce((value, transform) => transform(value), decl.value);
     
-        root.walkAtRules((atRule) => {
-      if (atRule.params) {
-        atRule.params = translateValues(atRule.params);
-      }
-    });
-  };
+    const translatedProp = decl.prop.startsWith('--') 
+      ? translateCustomProperty(decl.prop)
+      : translateProperty(decl.prop);
+    
+    decl.value = translatedValue;
+    decl.prop = translatedProp;
+  });
+  
+  root.walkAtRules((atRule) => {
+    if (atRule.params) {
+      atRule.params = translateValues(atRule.params);
+    }
+  });
+};
+
+module.exports = () => ({
+  postcssPlugin: 'postcss-kazaksha',
+  Once: processRoot
 });
 
 module.exports.postcss = true;
