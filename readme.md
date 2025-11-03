@@ -41,7 +41,7 @@ module.exports = {
 }
 
 @media (ең-аз-ені: 768px) {
-  .контейнер {
+  .container {
     ені: 100%;
   }
 }
