@@ -16,10 +16,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/сіздің-username/postcss-kazaksha.git"
+    "url": "https://github.com/Baukaalm/postcss-kazaksha.git"
   },
   "bugs": {
-    "url": "https://github.com/сіздің-username/postcss-kazaksha/issues"
+    "url": "https://github.com/Baukaalm/postcss-kazaksha/issues"
   },
   "peerDependencies": {
     "postcss": "^8.0.0"
