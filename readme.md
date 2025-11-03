@@ -59,10 +59,3 @@ module.exports = {
 ## Лицензия
 
 MIT
-```
-
-**3. .gitignore:**
-```
-node_modules/
-npm-debug.log
-.DS_Store
